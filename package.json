@@ -4,6 +4,6 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/main.js"
+    "start": "nodemon src/test.js"
   }
 }

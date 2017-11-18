@@ -1,6 +1,6 @@
-Array.prototype.random = function() {
-  const randomIndex = Math.round(Math.random() * (this.length - 1));
-  return this[randomIndex];
+const getRandomArrValue = function(array) {
+  const randomIndex = Math.round(Math.random() * (array.length - 1));
+  return array[randomIndex];
 };
 
 const firstWorld = [
@@ -173,11 +173,8 @@ const endWorld = [
 
 const genType = Math.round(Math.random() * 3);
 
-console.log(
-  `Уникальных: ${firstWorld.length *
-    endWorld.length} (${firstWorld.length} * ${endWorld.length})`
-);
-
-for (let i = 0; i < 20; i++) {
-  console.log(`${firstWorld.random()} ${endWorld.random()}`);
-}
+module.exports = {
+  generate() {
+    return `${getRandomArrValue(firstWorld)} ${getRandomArrValue(endWorld)}`;
+  }
+};

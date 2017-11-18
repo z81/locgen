@@ -171,8 +171,6 @@ const endWorld = [
   "Драконов"
 ];
 
-const genType = Math.round(Math.random() * 3);
-
 module.exports = {
   generate() {
     return `${getRandomArrValue(firstWorld)} ${getRandomArrValue(endWorld)}`;
